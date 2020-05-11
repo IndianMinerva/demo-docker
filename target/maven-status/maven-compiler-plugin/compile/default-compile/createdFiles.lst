@@ -1,6 +1,0 @@
-com/penguin/demo/service/UserService.class
-com/penguin/demo/config/SwaggerConfig.class
-com/penguin/demo/pojo/User.class
-com/penguin/demo/repository/UserRepository.class
-com/penguin/demo/DemoApplication.class
-com/penguin/demo/controller/UserController.class
