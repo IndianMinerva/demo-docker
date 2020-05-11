@@ -27,13 +27,13 @@ public class UserController {
 
     @ApiOperation("Get")
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUser(@PathVariable("id") Long id) {
+    public ResponseEntity<User> getUser(@PathVariable("id") String id) {
         return ResponseEntity.ok(userService.getUserById(id).orElseThrow(() -> new RuntimeException("User not found exception")));
     }
 
     @ApiOperation("Get")
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable("id") Long id) {
+    public void deleteUser(@PathVariable("id") String id) {
         userService.deleteUser(id);
     }
 

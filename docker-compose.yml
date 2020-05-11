@@ -1,14 +1,12 @@
-mysql:
-  image: mysql:latest
-  ports:
-    - 3306:3306
-    - 33060:33060
-  environment:
-    - MYSQL_ROOT_PASSWORD=Poseidon1202
-
-app:
-  image: java/app:latest
-  ports:
-     - 8080:8080
-  links: 
-    - mysql
+version: '3.7'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+  app:
+    image: indianminerva/arun-app:latest
+    ports:
+       - 8080:8080
+    depends_on:
+       - mongo

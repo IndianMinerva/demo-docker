@@ -1,0 +1,12 @@
+spring:
+  profiles: docker
+  data:
+    mongodb:
+    host: mongo
+
+---
+spring:
+  profiles: local
+  data:
+    mongodb:
+      host: localhost
